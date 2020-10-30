@@ -26,8 +26,6 @@ for i, microphone_name in enumerate(mic_list):
         device_id = i
 
 with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=chunk_size) as source:
-    # wait for a second to let the recognizer adjust the
-    # energy threshold based on the surrounding noise level
     r.adjust_for_ambient_noise(source)
     print("Say Something")
     # listens for the user's input
@@ -81,9 +79,6 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
             # Iterate over the allheadlines list and print each headline
             for hl in allheadlines:
                 print(hl)
-            #message = 'str(allheadlines)'
-            #os.system('espeak -ven+f3 -k5 -s150 "' + message + '"')
-            #time.sleep(1)
             engine = pyttsx3.init()
             engine.say(str(allheadlines))
             engine.setProperty('rate', 120)
@@ -95,9 +90,6 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
         else:
            a=(wikipedia.summary(str(text), sentences=2))
            print(a)
-           #message = 'str(a)'
-           #os.system('espeak -ven+f3 -k5 -s150 "' + message + '"')
-           #time.sleep(1)
            engine = pyttsx3.init()
            engine.say(a)
            engine.setProperty('rate', 120)
