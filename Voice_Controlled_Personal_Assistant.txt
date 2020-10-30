@@ -36,9 +36,6 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
     try:
         text = r.recognize_google(audio)
         print("you said: "),print(text)
-        #message = 'str(text)'
-        #os.system('espeak -ven+f3 -k5 -s150 "' + message + '"')
-        #time.sleep(1)
         engine = pyttsx3.init()
         engine.say(str(text))
         engine.setProperty('rate', 120)
@@ -72,7 +69,7 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
             newsurls = {
                 #'apnews': 'http://hosted2.ap.org/atom/APDEFAULT/3d281c11a96b4ad082fe88aa0db04305',
                 'googlenews': 'https://news.google.com/news/rss/?hl=en&amp;ned=us&amp;gl=US',
-                #'yahoonews': 'http://news.yahoo.com/rss/'
+                
             }
 
             # Iterate over the feed urls
