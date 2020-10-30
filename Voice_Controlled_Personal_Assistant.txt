@@ -1,0 +1,156 @@
+# Python 2.x program for Speech Recognition
+
+import speech_recognition as sr
+import feedparser
+import playsound
+import wikipedia
+import pyttsx3
+
+#from pygame import mixer # Load the required library
+
+#from googlesearch.googlesearch import GoogleSearch
+#from weather import Weather, Unit
+#import pywapi
+
+try:
+    from googlesearch import search
+except ImportError:
+    print("No module named 'google' found")
+
+# enter the name of usb microphone that you found
+# using lsusb
+# the following name is only used as an example
+# mic_name = "USB Device 0x46d:0x825: Audio (hw:1, 0)"
+mic_name = "Microphone (Realtek High Defini"
+# Sample rate is how often values are recorded
+sample_rate = 44100  # 48000
+# Chunk is like a buffer. It stores 2048 samples (bytes of data)
+# here.
+# it is advisable to use powers of 2 such as 1024 or 2048
+chunk_size = 512  # 2048
+# Initialize the recognizer
+r = sr.Recognizer()
+
+# generate a list of all audio cards/microphones
+mic_list = sr.Microphone.list_microphone_names()
+print(mic_list)
+
+# the following loop aims to set the device ID of the mic that
+# we specifically want to use to avoid ambiguity.
+for i, microphone_name in enumerate(mic_list):
+    if microphone_name == mic_name:
+        device_id = i
+
+# use the microphone as source for input. Here, we also specify
+# which device ID to specifically look for incase the microphone
+# is not working, an error will pop up saying "device_id undefined"
+with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=chunk_size) as source:
+    # wait for a second to let the recognizer adjust the
+    # energy threshold based on the surrounding noise level
+    r.adjust_for_ambient_noise(source)
+    print("Say Something")
+    # listens for the user's input
+    audio = r.listen(source)
+
+    #query = "weather"
+
+    #for j in search(query, tld="co.in", num=2, stop=1, pause=2):
+        #print(j)
+
+    #weather = Weather(Unit.CELSIUS)
+    #lookup = weather.lookup_by_latlng(15.4541, 75.0067)
+    #condition = lookup.condition
+    #print(condition.text)
+
+    try:
+        text = r.recognize_google(audio)
+        print("you said: "),print(text)
+        #message = 'str(text)'
+        #os.system('espeak -ven+f3 -k5 -s150 "' + message + '"')
+        #time.sleep(1)
+        engine = pyttsx3.init()
+        engine.say(str(text))
+        engine.setProperty('rate', 120)
+        engine.setProperty('volume', 0.9)
+        engine.runAndWait()
+
+
+        if text == "news":
+
+            # Function to fetch the rss feed and return the parsed RSS
+            def parseRSS(rss_url):
+                return feedparser.parse(rss_url)
+
+                # Function grabs the rss feed headlines (titles) and returns them as a list
+
+
+            def getHeadlines(rss_url):
+                headlines = []
+
+                feed = parseRSS(rss_url)
+                for newsitem in feed['items']:
+                    headlines.append(newsitem['title'])
+
+                return headlines
+
+
+            # A list to hold all headlines
+            allheadlines = []
+
+            # List of RSS feeds that we will fetch and combine
+            newsurls = {
+                #'apnews': 'http://hosted2.ap.org/atom/APDEFAULT/3d281c11a96b4ad082fe88aa0db04305',
+                'googlenews': 'https://news.google.com/news/rss/?hl=en&amp;ned=us&amp;gl=US',
+                #'yahoonews': 'http://news.yahoo.com/rss/'
+            }
+
+            # Iterate over the feed urls
+            for key, url in newsurls.items():
+                # Call getHeadlines() and combine the returned headlines with allheadlines
+                allheadlines.extend(getHeadlines(url))
+
+
+            # Iterate over the allheadlines list and print each headline
+            for hl in allheadlines:
+                print(hl)
+            #message = 'str(allheadlines)'
+            #os.system('espeak -ven+f3 -k5 -s150 "' + message + '"')
+            #time.sleep(1)
+            engine = pyttsx3.init()
+            engine.say(str(allheadlines))
+            engine.setProperty('rate', 120)
+            engine.setProperty('volume', 0.9)
+            engine.runAndWait()
+        elif text == "play song":
+
+            playsound.playsound('C:/Users/ADMIN/Desktop/shree-ganesh-ekadantaya-vakratundaya.mp3', True)
+        else:
+           a=(wikipedia.summary(str(text), sentences=2))
+           print(a)
+           #message = 'str(a)'
+           #os.system('espeak -ven+f3 -k5 -s150 "' + message + '"')
+           #time.sleep(1)
+           engine = pyttsx3.init()
+           engine.say(a)
+           engine.setProperty('rate', 120)
+           engine.setProperty('volume', 0.9)
+           engine.runAndWait()
+
+
+            # error occurs when google could not understand what was said
+
+    except sr.UnknownValueError:
+        print("Google Speech Recognition could not understand audio please repeat")
+        #message = 'str('Google Speech Recognition could not understand audio please repeat')
+        #os.system('espeak -ven+f3 -k5 -s150 "' + message + '"')
+        #time.sleep(1)
+        engine = pyttsx3.init()
+        engine.say("Google Speech Recognition could not understand audio please repeat")
+        engine.setProperty('rate', 120)
+        engine.setProperty('volume', 0.9)
+        engine.runAndWait()
+
+    except sr.RequestError as e:
+        print("Could not request results from Google Speech Recognition service; {0}".format(e))
+
+
