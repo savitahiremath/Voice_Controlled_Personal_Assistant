@@ -8,7 +8,7 @@ It is a Voice Controlled System, Where User gives input as Voice and receives de
 Visually impaired person can't give text input to get any source of information which they are in need of, Therefore have to be dependent on others.
 
 ## Flow Chart
-![](C:\Users\Lenovo\Desktop)
+![](C:\Users\Lenovo\Desktop\image_1.png)
 
 ## Excpected Results
 It must convert the voice user input to text, process it and give desired output in the form of voice.
