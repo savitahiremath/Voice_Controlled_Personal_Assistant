@@ -12,6 +12,9 @@ Visually impaired person can't give text input to get any source of information 
 ## Excpected Results
 It must convert the voice user input to text, process it and give desired output in the form of voice.
 
+## Flow Chart
+![image_1](https://user-images.githubusercontent.com/42416500/97989555-b6c50600-1e04-11eb-8bf9-1dcb897094b9.PNG)
+
 ## Results
 It took input as a voice from users and given them desired output in the form of voice.
 
