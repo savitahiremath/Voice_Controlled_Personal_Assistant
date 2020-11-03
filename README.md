@@ -10,7 +10,7 @@ Visually impaired person can't give text input to get any source of information 
 
 ## INTERFACING HARDWARE DEVICES WITH RASPBERRY PI
 
-![image_2](https://user-images.githubusercontent.com/42416500/98029761-0b34a980-1e36-11eb-8978-fbde11247481.PNG)
+![image](https://user-images.githubusercontent.com/42416500/98030584-4388b780-1e37-11eb-9c35-d51e75f07802.png)
 
 ### INTERFACING OF RASPBERRY PI WITH SPEAKER
 
