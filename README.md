@@ -27,7 +27,14 @@ Connect the speaker to the audio jack as shown in the image.
 
 
 ## AUDIO CONFIGURATION
+
+Step1:  Open up raspi-config by entering the following into the command line:
+Sudo raspi-config
+This will open the configuaration screen :         
+
 ![image](https://user-images.githubusercontent.com/42416500/98031435-7e3f1f80-1e38-11eb-8fdf-61a57e77c98e.png)
+
+Step2: Select option 8: advanced options and press Enter, then select options A6: Audio and press Enter:              
 
 
 
