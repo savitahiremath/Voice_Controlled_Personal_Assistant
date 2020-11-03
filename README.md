@@ -8,6 +8,12 @@ It is a Voice Controlled System, Where User gives input as Voice and receives de
 ## Problem Statement
 Visually impaired person can't give text input to get any source of information which they are in need of, Therefore have to be dependent on others.
 
+## INTERFACING HARDWARE DEVICES WITH RASPBERRY PI
+
+![image_2](https://user-images.githubusercontent.com/42416500/98028729-81d0a780-1e34-11eb-8a03-4059ac22cee1.PNG)
+### INTERFACING OF RASPBERRY PI WITH SPEAKER
+
+
 
 ## Excpected Results
 It must convert the voice user input to text, process it and give desired output in the form of voice.
