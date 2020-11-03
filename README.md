@@ -15,6 +15,8 @@ Visually impaired person can't give text input to get any source of information 
 ### INTERFACING OF RASPBERRY PI WITH SPEAKER
 
 ![image](https://user-images.githubusercontent.com/42416500/98030983-d6c1ed00-1e37-11eb-83fe-e6ae00e5bc55.png)
+## Audio Configuration
+![image](https://user-images.githubusercontent.com/42416500/98031435-7e3f1f80-1e38-11eb-8fdf-61a57e77c98e.png)
 
 ## Excpected Results
 It must convert the voice user input to text, process it and give desired output in the form of voice.
