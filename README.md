@@ -13,6 +13,8 @@ Visually impaired person can't give text input to get any source of information 
 ![image_2](https://user-images.githubusercontent.com/42416500/98028729-81d0a780-1e34-11eb-8a03-4059ac22cee1.PNG)
 ### INTERFACING OF RASPBERRY PI WITH SPEAKER
 
+![image](https://user-images.githubusercontent.com/42416500/98029252-39fe5000-1e35-11eb-9f1d-73f8bc4ee2ef.png)
+
 
 
 ## Excpected Results
