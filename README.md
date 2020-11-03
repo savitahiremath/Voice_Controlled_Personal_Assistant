@@ -46,6 +46,12 @@ Step2: Select option 8: advanced options and press Enter, then select options A6
 
 ![image](https://user-images.githubusercontent.com/42416500/98032887-acbdfa00-1e3a-11eb-8706-e884afca9b9c.png)
 
+                                        
+Now you are presented with the two modes explained above as an alternative to the default Auto option. 
+Select a mode, Press Enter and press the right arrow key to exit the options list, 
+then select finish to exit the configuration tool.
+
+
 
 
 ## EXPECTED RESULTS
