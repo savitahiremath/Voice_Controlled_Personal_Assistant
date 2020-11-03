@@ -15,6 +15,9 @@ Visually impaired person can't give text input to get any source of information 
 ### INTERFACING OF RASPBERRY PI WITH SPEAKER
 
 ![image](https://user-images.githubusercontent.com/42416500/98030983-d6c1ed00-1e37-11eb-83fe-e6ae00e5bc55.png)
+Make sure your Raspberry Pi is powered up and connected to your network.
+Connect the speaker to the audio jack as shown in the image. 
+
 ## Audio Configuration
 ![image](https://user-images.githubusercontent.com/42416500/98031435-7e3f1f80-1e38-11eb-8fdf-61a57e77c98e.png)
 
