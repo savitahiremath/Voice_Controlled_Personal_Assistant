@@ -81,6 +81,8 @@ After making the changes you can paste this configuration in “.asoundrc” fil
 
 
 
+![image](https://user-images.githubusercontent.com/42416500/98411289-cad66500-209b-11eb-99a1-3c9dfc8d3726.png)
+
 
 
 
