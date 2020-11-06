@@ -68,6 +68,17 @@ Step2: List Available Recording Devices (Microphone) and Locate Card Number and 
 
 The next step is to locate the correct Recording Device (Microphone) Card and the Device Number. You can use the “arecord -l” command to list all the playback devices available on your Raspberry Pi. Locate the device with the same Manufacturer name as you found in the “lsusb” command output, and note down the card number and device number for it.
 
+![image](https://user-images.githubusercontent.com/42416500/98410488-c78ea980-209a-11eb-9639-3134a38135a1.png)
+
+
+Step 3. Set your Recording and Playback Device as the Default PCM Devices:
+
+
+At this stage, you should have the Card Number and the Device Number for you Recording and Playback devices. You can now use the following configuration template and replace “card number” and “device number” for the Mic and Speaker sections.
+
+After making the changes you can paste this configuration in “.asoundrc” file under your Raspberry Pi home directory (/home/pi). For global configuration, you may add this config to “/etc/asound.conf” directory. Your configuration should similar to the config shown in the following screenshot with your respective “card number” and “device number” values 
+
+
 
 
 
