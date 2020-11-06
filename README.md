@@ -66,7 +66,7 @@ Before you start, you need to check if your USB device is detected by the Raspbe
 Step2: List Available Recording Devices (Microphone) and Locate Card Number and Device Number:
 
 
-The next step is to locate the correct Recording Device (Microphone) Card and the Device Number. You can use the “arecord -l” command to list all the playback devices available on your Raspberry Pi. Locate the device with the same Manufacturer name as 
+The next step is to locate the correct Recording Device (Microphone) Card and the Device Number. You can use the “arecord -l” command to list all the playback devices available on your Raspberry Pi. Locate the device with the same Manufacturer name as you found in the “lsusb” command output, and note down the card number and device number for it.
 
 
 
