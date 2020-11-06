@@ -92,9 +92,7 @@ It must convert the voice user input to text, process it and give desired output
 
 ## FLOW CHART
 
-
-
-![image](https://user-images.githubusercontent.com/42416500/98033410-78970900-1e3b-11eb-9b1f-0898b13e5a6e.png)
+![image](https://user-images.githubusercontent.com/42416500/98411813-bf376e00-209c-11eb-9868-7ae2a53403b5.png)
 
 
 
