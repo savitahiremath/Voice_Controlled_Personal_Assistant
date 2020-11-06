@@ -59,6 +59,9 @@ Step 1. Check If the Device is Detected by Raspberry Pi:
 
 Before you start, you need to check if your USB device is detected by the Raspberry Pi. To do this, you can use the “lsusb” command. Locate the device manufacturer name in the command output as shown in the following output (If you don’t see your device in the command output, either your device is faulty or the device driver is not available for it.) 
 
+![image](https://user-images.githubusercontent.com/42416500/98409447-e2f8b500-2098-11eb-8c93-12ea132dd069.png)
+
+
 
 
 
