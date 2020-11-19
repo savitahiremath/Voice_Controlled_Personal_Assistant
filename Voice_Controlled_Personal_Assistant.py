@@ -40,16 +40,12 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
         engine.setProperty('volume', 0.9)
         engine.runAndWait()
 
-
         if text == "news":
-
             # Function to fetch the rss feed and return the parsed RSS
             def parseRSS(rss_url):
                 return feedparser.parse(rss_url)
-
-                # Function grabs the rss feed headlines (titles) and returns them as a list
-
-
+               
+            # Function grabs the rss feed headlines (titles) and returns them as a list
             def getHeadlines(rss_url):
                 headlines = []
 
@@ -65,9 +61,7 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
 
             # List of RSS feeds that we will fetch and combine
             newsurls = {
-                #'apnews': 'http://hosted2.ap.org/atom/APDEFAULT/3d281c11a96b4ad082fe88aa0db04305',
-                'googlenews': 'https://news.google.com/news/rss/?hl=en&amp;ned=us&amp;gl=US',
-                
+                'googlenews': 'https://news.google.com/news/rss/?hl=en&amp;ned=us&amp;gl=US',                
             }
 
             # Iterate over the feed urls
@@ -85,8 +79,8 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
             engine.setProperty('volume', 0.9)
             engine.runAndWait()
         elif text == "play song":
-
             playsound.playsound('C:/Users/ADMIN/Desktop/shree-ganesh-ekadantaya-vakratundaya.mp3', True)
+            
         else:
            a=(wikipedia.summary(str(text), sentences=2))
            print(a)
@@ -97,8 +91,7 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
            engine.runAndWait()
 
 
-            # error occurs when google could not understand what was said
-
+     # error occurs when google could not understand what was said
     except sr.UnknownValueError:
         print("Google Speech Recognition could not understand audio please repeat")
         engine = pyttsx3.init()
