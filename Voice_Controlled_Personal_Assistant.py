@@ -48,13 +48,11 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
             # Function grabs the rss feed headlines (titles) and returns them as a list
             def getHeadlines(rss_url):
                 headlines = []
-
                 feed = parseRSS(rss_url)
                 for newsitem in feed['items']:
                     headlines.append(newsitem['title'])
 
                 return headlines
-
 
             # A list to hold all headlines
             allheadlines = []
@@ -73,11 +71,13 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
             # Iterate over the allheadlines list and print each headline
             for hl in allheadlines:
                 print(hl)
+                
             engine = pyttsx3.init()
             engine.say(str(allheadlines))
             engine.setProperty('rate', 120)
             engine.setProperty('volume', 0.9)
             engine.runAndWait()
+            
         elif text == "play song":
             playsound.playsound('C:/Users/ADMIN/Desktop/shree-ganesh-ekadantaya-vakratundaya.mp3', True)
             
@@ -89,7 +89,6 @@ with sr.Microphone(device_index=device_id, sample_rate=sample_rate, chunk_size=c
            engine.setProperty('rate', 120)
            engine.setProperty('volume', 0.9)
            engine.runAndWait()
-
 
      # error occurs when google could not understand what was said
     except sr.UnknownValueError:
