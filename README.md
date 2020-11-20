@@ -100,10 +100,23 @@ It must convert the voice user input to text, process it and give desired output
 It took input as a voice from users and given them desired output in the form of voice.
 
 
-## SPEECH RECOGNITION MODULE  
+### SPEECH RECOGNITION MODULE  
 
 
 ![image](https://user-images.githubusercontent.com/42416500/99827355-85c42f80-2b7f-11eb-9364-ed15de76c8a9.png)
+
+### NEWS MODULE
+
+
+![image](https://user-images.githubusercontent.com/42416500/99827909-3f230500-2b80-11eb-9b7d-da8d5e60dffe.png)
+
+
+### WIKIPEDIA MODULE
+
+
+![image](https://user-images.githubusercontent.com/42416500/99827979-5b26a680-2b80-11eb-9d21-2636af2230b3.png)
+
+
 
 
 
