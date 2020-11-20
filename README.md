@@ -100,6 +100,12 @@ It must convert the voice user input to text, process it and give desired output
 It took input as a voice from users and given them desired output in the form of voice.
 
 
+## SPEECH RECOGNITION MODULE  
+
+
+![image](https://user-images.githubusercontent.com/42416500/99827355-85c42f80-2b7f-11eb-9364-ed15de76c8a9.png)
+
+
 
 ## References
 Dahl, George E., et al. "Context-dependent pre-trained deep neural networks for large-vocabulary speech recognition." Audio, Speech, and Language Processing, IEEE Transactions on 20.1 (2012): 30-42. 
